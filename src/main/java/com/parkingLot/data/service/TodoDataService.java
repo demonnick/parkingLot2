@@ -13,9 +13,9 @@ import java.util.List;
 
 public class TodoDataService {
 
-	private static final String INSERT_TODO_QUERY = "INSERT INTO TODO(DESCRIPTION,IS_DONE) VALUES(?, ?)";
+	private static final String INSERT_TODO_QUERY = "INSERT INTO PARKING(DESCRIPTION,IS_DONE) VALUES(?, ?)";
 
-	private static final String DELETE_TODO_QUERY = "DELETE FROM TODO WHERE ID=?";
+	private static final String DELETE_TODO_QUERY = "DELETE FROM PARKING WHERE ID=?";
 
 	HsqlDatabase db = new HsqlDatabase();
 
@@ -69,7 +69,7 @@ public class TodoDataService {
 	public List<Todo> retrieveAllTodos() throws SQLException {
 		List<Todo> todos = new ArrayList<Todo>();
 		Statement st = db.conn.createStatement();
-		ResultSet rs = st.executeQuery("SELECT * FROM TODO");
+		ResultSet rs = st.executeQuery("SELECT * FROM PARKING");
 		while (rs.next()) {
 			todos.add(new Todo(rs.getInt(1), rs.getString(2), rs.getBoolean(3)));
 		}
@@ -81,9 +81,9 @@ public class TodoDataService {
 
 		TodoDataService dataservice = new TodoDataService();
 
-		dataservice.insertTodos(Arrays.asList(new Todo(0, "New Todo fasdf1",
-				false)));
-		dataservice.deleteTodo(1);
+		//dataservice.insertTodos(Arrays.asList(new Todo(0, "New Todo fasdf1", false)));
+	dataservice.insertTodos(Arrays.asList(new Todo()));
+	//	dataservice.deleteTodo(1);
 		List<Todo> todos = dataservice.retrieveAllTodos();
 		logger.info(todos);
 		dataservice.db.closeConnection();

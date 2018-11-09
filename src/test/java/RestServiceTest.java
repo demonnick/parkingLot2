@@ -6,6 +6,7 @@ import org.jboss.resteasy.mock.MockHttpResponse;
 import org.jboss.resteasy.plugins.server.resourcefactory.POJOResourceFactory;
 import org.junit.Assert;
 import org.junit.BeforeClass;
+import org.junit.Ignore;
 import org.junit.Test;
 
 import javax.ws.rs.core.Response;
@@ -23,6 +24,7 @@ public class RestServiceTest {
     }
     // One of our actual tests!
     @Test
+    @Ignore
     public void helloTest() {
         try {
             // Specify the endpoint we want to test, for our example, we use "/hello"

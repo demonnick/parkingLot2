@@ -23,7 +23,7 @@ public class HsqlDatabase {
 	}
 
 	private void setupConnection() throws SQLException {
-		conn = DriverManager.getConnection("jdbc:hsqldb:file:C:/Users/fornic01/Desktop/parkingLot/src/main/webapp/WEB-INF\\PARKING/", "sa", "");
+		conn = DriverManager.getConnection("jdbc:hsqldb:file:C:/Users/fornic01/Desktop/parkingLot/src/main/webapp/WEB-INF\\parking/", "sa", "");
 	}
 
 	private void loadJdbcDriverForHsqlDb() throws ClassNotFoundException {

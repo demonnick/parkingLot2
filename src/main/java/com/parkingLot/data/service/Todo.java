@@ -43,7 +43,7 @@ public class Todo {
 
 	@Override
 	public String toString() {
-		return "Todo [id=" + id + ", description=" + description + ", isDone="
+		return "parking [id=" + id + ", description=" + description + ", isDone="
 				+ isDone + "]";
 	}
 
