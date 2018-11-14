@@ -4,7 +4,8 @@ public class Ticket {
 
 
     private int id;
-    private String time_in; String time_out;
+    private String time_in;
+    private String time_out;
     private boolean is_lost;
 
 
