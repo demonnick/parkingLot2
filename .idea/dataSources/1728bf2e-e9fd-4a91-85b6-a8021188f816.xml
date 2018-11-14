@@ -37,12 +37,12 @@
       <Position>5</Position>
       <DataType>BOOLEAN|16s</DataType>
     </column>
-    <index id="13" parent="6" name="SYS_IDX_SYS_PK_10096_10097">
+    <index id="13" parent="6" name="SYS_IDX_SYS_PK_10095_10096">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Unique>1</Unique>
     </index>
-    <key id="14" parent="6" name="SYS_PK_10096">
+    <key id="14" parent="6" name="SYS_PK_10095">
       <NameSurrogate>1</NameSurrogate>
       <ColNames>ID</ColNames>
       <Primary>1</Primary>

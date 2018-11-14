@@ -1,4 +1,4 @@
-import com.parkingLot.rest.RestService;
+import com.parkingLot.rest.Rest;
 import org.jboss.resteasy.core.Dispatcher;
 import org.jboss.resteasy.mock.MockDispatcherFactory;
 import org.jboss.resteasy.mock.MockHttpRequest;
@@ -19,7 +19,7 @@ public class RestServiceTest {
     @BeforeClass
     public static void setup() {
         dispatcher = MockDispatcherFactory.createDispatcher();
-        noDefaults = new POJOResourceFactory(RestService.class);
+        noDefaults = new POJOResourceFactory(Rest.class);
         dispatcher.getRegistry().addResourceFactory(noDefaults);
     }
     // One of our actual tests!

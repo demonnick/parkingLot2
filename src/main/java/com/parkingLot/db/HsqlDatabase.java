@@ -1,4 +1,4 @@
-package com.parkingLot.data.service;
+package com.parkingLot.db;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -23,7 +23,7 @@ public class HsqlDatabase {
 	}
 
 	private void setupConnection() throws SQLException {
-		conn = DriverManager.getConnection("jdbc:hsqldb:file:C:/Users/fornic01/Desktop/parkingLot/src/main/webapp/WEB-INF\\parking/", "sa", "");
+		conn = DriverManager.getConnection("jdbc:hsqldb:file:C:/Users/fornic01/Desktop/parkingLot/fin/src/main/java/com/parkingLot/data/service\\PARKING/", "sa", "");
 	}
 
 	private void loadJdbcDriverForHsqlDb() throws ClassNotFoundException {
