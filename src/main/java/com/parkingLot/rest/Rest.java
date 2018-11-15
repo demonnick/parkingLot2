@@ -35,17 +35,35 @@ import java.util.List;
 @Path("/")
 public class Rest {
 
-    TicketDao t = new TicketDao();
+
 
     @GET // This annotation indicates GET request
-    @Path("/hello")
+    @Path("/all")
     @Produces(MediaType.APPLICATION_JSON)
-    public List<Ticket> hello() throws SQLException {
+    public List<Ticket> getAll() throws SQLException {
 
         TicketDao t = new TicketDao();
-        
+
 
         return t.retrieveAll();
+
     }
+
+        @GET // This annotation indicates GET request
+        @Path("/lost")
+        @Produces(MediaType.APPLICATION_JSON)
+        public List<Ticket> hello() throws SQLException {
+
+            TicketDao t = new TicketDao();
+
+
+            return t.retrieveLost();
+
+    }
+
+
+
+
+
 }
     
