@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="jdbc:hsqldb:file:C:/Users/fornic01/Desktop/parkingLot/fin/src/main/resources\PARKING/">
+  <database-model serializer="dbm" rdbms="HSQLDB" format-version="4.11">
+    <root id="1">
+      <ServerVersion>2.4</ServerVersion>
+    </root>
+    <database id="2" parent="1" name="PUBLIC">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </database>
+    <schema id="3" parent="2" name="INFORMATION_SCHEMA"/>
+    <schema id="4" parent="2" name="PUBLIC">
+      <Current>1</Current>
+      <Visible>1</Visible>
+    </schema>
+    <schema id="5" parent="2" name="SYSTEM_LOBS"/>
+    <table id="6" parent="4" name="TICKET"/>
+    <column id="7" parent="6" name="ID">
+      <Position>1</Position>
+      <DataType>INTEGER|4s</DataType>
+    </column>
+    <column id="8" parent="6" name="TIME_IN">
+      <Position>2</Position>
+      <DataType>TIMESTAMP|93s</DataType>
+    </column>
+    <column id="9" parent="6" name="TIME_OUT">
+      <Position>3</Position>
+      <DataType>TIMESTAMP|93s</DataType>
+    </column>
+    <column id="10" parent="6" name="IS_LOST">
+      <Position>4</Position>
+      <DataType>BOOLEAN|16s</DataType>
+    </column>
+  </database-model>
+</dataSource>
