@@ -1,5 +1,7 @@
 package com.parkingLot.db;
 
+import org.flywaydb.core.Flyway;
+
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -39,4 +41,6 @@ public class HsqlDatabase {
 		shutdownHsqlDatabase();
 		conn.close(); // if there are no other open connection
 	}
+
+
 }

@@ -7,10 +7,9 @@ import javax.ws.rs.Produces;
 import javax.ws.rs.core.MediaType;
 
 import com.parkingLot.app.Ticket;
-import com.parkingLot.data.service.*;
+import com.parkingLot.dao.TicketDao;
 
 import java.sql.SQLException;
-import java.util.ArrayList;
 import java.util.List;
 
 //

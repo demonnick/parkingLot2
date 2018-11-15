@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="DataSourceManagerImpl" format="xml" multifile-model="true">
-    <data-source source="LOCAL" name="jdbc:hsqldb:file:C:/Users/fornic01/Desktop/parkingLot/fin/src/main/resources\PARKING/" uuid="aab20df6-b630-456c-9a73-43379b211650">
+    <data-source source="LOCAL" name="jdbc:hsqldb:file:C:/Users/fornic01/Desktop/parkingLot/fin/src/main/resources\PARKING/" uuid="79e3daf1-9cf7-4373-97aa-85f19bbcacbe">
       <driver-ref>hsqldb.local</driver-ref>
       <synchronize>true</synchronize>
       <configured-by-url>true</configured-by-url>

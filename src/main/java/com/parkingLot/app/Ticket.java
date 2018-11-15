@@ -1,16 +1,18 @@
 package com.parkingLot.app;
 
+import java.util.Date;
+
 public class Ticket {
 
 
     private int id;
-    private String time_in;
-    private String time_out;
+    private long time_in;
+    private long time_out;
     private boolean is_lost;
    // private String cost;
 
 
-    public Ticket(int ID, String TIME_IN, String TIME_OUT, boolean IS_LOST) { //String Cost
+    public Ticket(int ID, long TIME_IN, long TIME_OUT, boolean IS_LOST) { //String Cost
         super();
         this.id = ID;
         this.time_in = TIME_IN;
@@ -21,9 +23,7 @@ public class Ticket {
 
     }
 
-    public Ticket() {
 
-    }
 
 
     public void setId(int ID) {
@@ -46,21 +46,21 @@ public class Ticket {
 //    }
 
 
-    public String getTimeIn() {
+    public long getTimeIn() {
         return time_in;
     }
 
-    public String getTimeOut() {
+    public long getTimeOut() {
 
         return time_out;
     }
 
-    public void setTime_in(String TIME_IN) {
+    public void setTime_in(long TIME_IN) {
 
         this.time_in = TIME_IN;
     }
 
-    public void setTime_out(String TIME_OUT) {
+    public void setTime_out(long TIME_OUT) {
 
         this.time_out = TIME_OUT;
     }
