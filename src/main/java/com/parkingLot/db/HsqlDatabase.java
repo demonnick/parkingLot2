@@ -1,6 +1,5 @@
 package com.parkingLot.db;
 
-import org.flywaydb.core.Flyway;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -8,39 +7,49 @@ import java.sql.SQLException;
 import java.sql.Statement;
 
 public class HsqlDatabase {
-	public Connection conn;
+    public Connection conn;
 
-	// Connecting to database =>
-	// Executing Query
-	public HsqlDatabase() {
-		try {
-			loadJdbcDriverForHsqlDb();
-			setupConnection();
-		} catch (ClassNotFoundException e) {
-			e.printStackTrace();
-		} catch (SQLException e) {
-			e.printStackTrace();
-		}
 
-	}
+    public HsqlDatabase() {
+        loadJdbcDriverForHsqlDb();
+        setupConnection();
 
-	private void setupConnection() throws SQLException {
-		conn = DriverManager.getConnection("jdbc:hsqldb:file:C:/Users/fornic01/Desktop/parkingLot/fin/src/main/resources\\PARKING/", "sa", "");
-	}
+    }
 
-	private void loadJdbcDriverForHsqlDb() throws ClassNotFoundException {
-		Class.forName("org.hsqldb.jdbcDriver");
-	}
+    private void setupConnection() {
+        try {
+            conn = DriverManager.getConnection("jdbc:hsqldb:file:C:/Users/fornic01/Desktop/monday/src/main/resources/PARKING/", "sa", "");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 
-	private void shutdownHsqlDatabase() throws SQLException {
-		Statement st = conn.createStatement();
-		st.execute("SHUTDOWN");
-	}
+    private void loadJdbcDriverForHsqlDb() {
+        try {
+            Class.forName("org.hsqldb.jdbcDriver");
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        }
+    }
 
-	public void closeConnection() throws SQLException {
-		shutdownHsqlDatabase();
-		conn.close(); // if there are no other open connection
-	}
+    private void shutdownHsqlDatabase() {
+        Statement st = null;
+        try {
+            st = conn.createStatement();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        try {
+            st.execute("SHUTDOWN");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void closeConnection() throws SQLException {
+        shutdownHsqlDatabase();
+        conn.close();
+    }
 
 
 }
